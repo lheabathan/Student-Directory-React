@@ -1,0 +1,157 @@
+*{
+  margin:0;
+  padding:0;
+  font-weight: normal;
+  font-size: medium;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Header styles */
+header{
+  padding:10px 30px;
+  margin: 20px;
+  box-shadow: 2px 2px rgba(85, 109, 85, 1);
+  border-radius: 20px;
+  background-color: rgba(136, 175, 140, 1);
+  text-align: center; 
+}
+
+header > h1{
+  font-size:xx-large;
+  font-weight: bolder;
+  color: white;
+}
+
+header > small{
+  font-size: medium ;
+  font-weight: 100;
+  color: black;
+}
+
+/* Form Styles */
+#formContainer{
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 2px 2px rgba(115, 120, 57, 1);
+  border-radius: 20px;
+  background-color: rgba(219, 224, 155, 1); 
+
+}
+
+#formContainer > #studentForm >.input-fields> label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#formContainer > #studentForm > .input-fields > input{
+  border:2px white; 
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+#formContainer > #studentForm >.input-fields{
+  display:flex;
+  flex-direction: column;
+  margin-bottom: 20px; 
+}
+
+#formContainer > #studentForm :last-child > button{
+    background-color:rgb(218, 193, 5);
+    padding: 5px;
+    border: 0px;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: medium ;
+    flex-grow: 1;
+    cursor: pointer;
+
+}
+
+#formContainer > #studentForm :last-child{
+    display: flex;
+    justify-content: center;
+}
+
+.list-item{
+  padding: 20px;
+  border-radius: 20px;
+  background-color: white; 
+
+  width: 80%;
+  justify-self: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  
+
+}
+
+#list-item{
+  font-size: small;
+  font-weight: normal;
+  color: white;
+  
+}
+
+#studentList{
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 2px 2px rgba(115, 120, 57, 1);
+  border-radius: 20px;
+  background-color: rgba(219, 224, 155, 1);
+  
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  
+}
+
+
+#studentList > .list-item > button{
+    background-color: red;
+    color: white;
+    padding: 3px 10px;
+    border: 0px;
+    border-radius: 10px;
+    font-weight: normal;
+    cursor: pointer;
+    margin-top: auto;
+
+}
+
+
+/* Responsive Design */
+/* Mobile */
+@media (width <= 440px){
+    #studentList > .list-item{
+        grid-column: span 12;
+    }
+}
+
+/* Tablet */ 
+@media (width > 440px) and (width <= 768px) {
+    #studentList > .list-item{
+        grid-column: span 6;
+    }
+}
+
+/* Desktop */
+
+@media (width <= 768px){
+    #studentList > .list-item{
+        grid-column: span 4;
+    }
+}
+
+
+
+
+
+
