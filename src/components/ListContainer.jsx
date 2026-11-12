@@ -1,32 +1,23 @@
-const ListContainer = () => {
+const ListContainer = ({data}) => {
   return (
+
+    <>
     <section id="studentList">
-
-      <article className="list-item">
-        <h2>Name</h2>
-        <p>Description</p>
+      {data.map((student) =>(
+        <article key ={student.id} className="list-item">
+        <h1>{student.name}</h1>
+        <p>{student.program}</p>
         <button>Delete</button>
       </article>
 
-      <article className="list-item">
-        <h2>Name</h2>
-        <p>Description</p>
-        <button>Delete</button>
-      </article>
 
-      <article className="list-item">
-        <h2>Name</h2>
-        <p>Description</p>
-        <button>Delete</button>
-      </article>
+      ))}
 
-      <article className="list-item">
-        <h2>Name</h2>
-        <p>Description</p>
-        <button>Delete</button>
-      </article>
+      
 
     </section>
+
+    </>
   );
 }
 
